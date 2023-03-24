@@ -1,11 +1,13 @@
 package backEnd_w2_project;
 
+import java.io.IOException;
 
 public class Runnable {
 
 	
 	public static void main(String[] args) {
 
+		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE DEI BOOKS E DEI MAGAZINE>>>>>>>>>>>>>>>>>>>
 		books book0 = new books("Marcel Proust", my_genere.AUTOBIOGRAFIA,1234,150,2010,"Alla ricerca del tempo perduto");
 		books book1 = new books("Fëdor Dostoevskij", my_genere.AVVENTURA_E_AZIONE,12345,250,1950,"I fratelli Karamazov ");
 		books book2 = new books("Gustave Flaubert", my_genere.BIOGRAFIA,12346,350,2005,"Madame Bovary");
@@ -30,8 +32,9 @@ public class Runnable {
 		magazine magazine8 = new magazine(my_magazine.SETTIMANALE,1223434,53,1934,"so");
 		magazine magazine9 = new magazine(my_magazine.SETTIMANALE,1223434,8,2018,"cosa");
 		magazine magazine10 = new magazine(my_magazine.SETTIMANALE,12324234,45,2003,"mettere");
+		//<<<<<<<<<<<<<<<<<<<FINE CREAZIONE DEI BOOKS E DEI MAGAZINE>>>>>>>>>>>>>>>>>>>
 		
-		
+		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE E POPOLAMENTO DELL'ARRAYLIST>>>>>>>>>>>>>>>>>>>
 		catalogo myCatalogo = new catalogo();
 		
 		myCatalogo.aggiungiElemento(book0);
@@ -47,14 +50,36 @@ public class Runnable {
 		myCatalogo.aggiungiElemento(magazine4);
 		
 		System.out.println(myCatalogo);
+		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE E POPOLAMENTO DELL'ARRAYLIST>>>>>>>>>>>>>>>>>>>
 		
+		//<<<<<<<<<<<<<<<<<<<METODO CHE ELIMINA UN ELEMENTO CERCATO PER ID>>>>>>>>>>>>>>>>>>>
 		myCatalogo.deleteForISBN();
-		
 		System.out.println(myCatalogo);
 		
+		//<<<<<<<<<<<<<<<<<<<METODO CHE CERCA UN ELEMENTOPER ID>>>>>>>>>>>>>>>>>>>
 		myCatalogo.searchForISBN();
+		
+		//<<<<<<<<<<<<<<<<<<<METODO CHE CERCA UN ELEMENTO PER ANNO>>>>>>>>>>>>>>>>>>>		
 		myCatalogo.searchForAnno();
+		
+		//<<<<<<<<<<<<<<<<<<<METODO CHE CERCA UN ELEMENTO PER AUTORE>>>>>>>>>>>>>>>>>>>
 		myCatalogo.searchForAutore();
+		
+		//<<<<<<<<<<<<<<<<<<<METODO CHE CREA UN FILE NEL DISCO CON I DATI DEL CATALOGO>>>>>>>>>>>>>>>>>>>
+		   try {
+			catalogo.saveToFile(myCatalogo);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		  
+		 //<<<<<<<<<<<<<<<<<<<METODO CHE CARICA UN FILE DAL DISCO>>>>>>>>>>>>>>>>>>>   
+		 try {
+			catalogo.loadFromFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
