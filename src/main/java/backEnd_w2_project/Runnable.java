@@ -7,7 +7,9 @@ public class Runnable {
 	
 	public static void main(String[] args) {
 
+		
 		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE DEI BOOKS E DEI MAGAZINE>>>>>>>>>>>>>>>>>>>
+		//BOOKS 
 		books book0 = new books("Marcel Proust", my_genere.AUTOBIOGRAFIA,1234,150,2010,"Alla ricerca del tempo perduto");
 		books book1 = new books("Fëdor Dostoevskij", my_genere.AVVENTURA_E_AZIONE,12345,250,1950,"I fratelli Karamazov ");
 		books book2 = new books("Gustave Flaubert", my_genere.BIOGRAFIA,12346,350,2005,"Madame Bovary");
@@ -20,7 +22,7 @@ public class Runnable {
 		books book9 = new books("Gabriel Garcia Marquez", my_genere.ROMANZO_DI_FORMAZIONE,1232344,250,2020,"Cent’anni di solitudine");
 		books book10 = new books("Herman Melville", my_genere.ROMANZO_STORICO,12334324,150,2010,"Moby Dick");
 
-		
+		//MAGAZINES
 		magazine magazine0 = new magazine(my_magazine.MENSILE,125435334,50,2010,"nomi");
 		magazine magazine1 = new magazine(my_magazine.MENSILE,1234534,30,2023,"di");
 		magazine magazine2 = new magazine(my_magazine.MENSILE,123434,46,2012,"giornali");
@@ -33,6 +35,7 @@ public class Runnable {
 		magazine magazine9 = new magazine(my_magazine.SETTIMANALE,1223434,8,2018,"cosa");
 		magazine magazine10 = new magazine(my_magazine.SETTIMANALE,12324234,45,2003,"mettere");
 		//<<<<<<<<<<<<<<<<<<<FINE CREAZIONE DEI BOOKS E DEI MAGAZINE>>>>>>>>>>>>>>>>>>>
+		
 		
 		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE E POPOLAMENTO DELL'ARRAYLIST>>>>>>>>>>>>>>>>>>>
 		catalogo myCatalogo = new catalogo();
@@ -50,7 +53,8 @@ public class Runnable {
 		myCatalogo.aggiungiElemento(magazine4);
 		
 		System.out.println(myCatalogo);
-		//<<<<<<<<<<<<<<<<<<<INIZIO CREAZIONE E POPOLAMENTO DELL'ARRAYLIST>>>>>>>>>>>>>>>>>>>
+		//<<<<<<<<<<<<<<<<<<<FINE CREAZIONE E POPOLAMENTO DELL'ARRAYLIST>>>>>>>>>>>>>>>>>>>
+		
 		
 		//<<<<<<<<<<<<<<<<<<<METODO CHE ELIMINA UN ELEMENTO CERCATO PER ID>>>>>>>>>>>>>>>>>>>
 		myCatalogo.deleteForISBN();
