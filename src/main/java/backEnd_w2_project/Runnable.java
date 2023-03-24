@@ -12,7 +12,7 @@ public class Runnable {
 		books book1 = new books("Fëdor Dostoevskij", my_genere.AVVENTURA_E_AZIONE,12345,250,1950,"I fratelli Karamazov ");
 		books book2 = new books("Gustave Flaubert", my_genere.BIOGRAFIA,12346,350,2005,"Madame Bovary");
 		books book3 = new books("Franz Kafka", my_genere.DISTOPIA,12347,530,1950,"Il processo");
-		books book4 = new books("Miguel de Cervantes", my_genere.EROTICO,12348,320,1989,"Don Chisciotte della Mancia");
+		books book4 = new books("Miguel de Cervantes", my_genere.IL_GIALLO,12348,320,1989,"Don Chisciotte della Mancia");
 		books book5 = new books("Thomas Mann", my_genere.FANTASCIENZA,12349,520,1967,"La montagna incantata ");
 		books book6 = new books("Lev Tolstoj", my_genere.FANTASY,123412,540,2012,"Guerra e pace");
 		books book7 = new books("Jonathan Franzen", my_genere.HORROR,1234342,550,1994,"Le correzioni");
